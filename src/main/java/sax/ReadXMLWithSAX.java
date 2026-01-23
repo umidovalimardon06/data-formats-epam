@@ -1,6 +1,8 @@
 package sax;
 
 
+import java.util.List;
+
 public class ReadXMLWithSAX {
 
 	@SuppressWarnings("unused")
@@ -8,7 +10,8 @@ public class ReadXMLWithSAX {
 		final String filename = "data/customers.xml";
 
         SAXCustomerHandler customerHandler = new SAXCustomerHandler();
-        customerHandler.readDataFromXML(filename);
-	}
+        List<Customer> customers = customerHandler.readDataFromXML(filename);
+        System.out.println("Number of customers: "+customers.size());
+    }
 
 }

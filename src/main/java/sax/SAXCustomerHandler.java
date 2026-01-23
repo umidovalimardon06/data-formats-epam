@@ -9,26 +9,33 @@ import javax.xml.parsers.SAXParser;
 import javax.xml.parsers.SAXParserFactory;
 import java.io.File;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 
 @SuppressWarnings("unused")
 public class SAXCustomerHandler extends DefaultHandler {
 
 	private List<Customer> data;
+    private String currentElement;
+    private Customer customer;
 	private static final String XMLDATEFORMAT = "yyyy-MM-dd'T'HH:mm:ss";
 
-	public void readDataFromXML(String filename) throws IOException, SAXException, ParserConfigurationException {
+	public List<Customer> readDataFromXML(String filename) throws IOException, SAXException, ParserConfigurationException {
 
         SAXParserFactory factory = SAXParserFactory.newInstance();
         SAXParser parser = factory.newSAXParser();
 
         parser.parse(new File(filename),this);
+
+        return data;
 	}
 
     @Override
     public void startDocument() throws SAXException {
-        System.out.println("Start document");
+//        System.out.println("Start document");
+        data = new ArrayList<>();
     }
+
     @Override
     public void endDocument() throws SAXException {
         System.out.println("End document");
@@ -36,13 +43,28 @@ public class SAXCustomerHandler extends DefaultHandler {
 
     @Override
     public void startElement(String uri, String localName, String qName, Attributes attributes) throws SAXException {
-        System.out.println("Start element "+qName);
+//        System.out.println("Start element "+qName);
+        currentElement = qName;
+
+        switch (currentElement) {
+            case "customers":
+                break;
+            case "customer":
+                customer = new Customer();
+                String idAsString = attributes.getValue(customer.ID);
+                customer.setId(Integer.parseInt(idAsString));
+                data.add(customer);
+                break;
+        }
+
     }
 
     @Override
     public void endElement(String uri, String localName, String qName) throws SAXException {
-        System.out.println("End element "+qName);
+//        System.out.println("End element "+qName);
+
     }
+
 
     @Override
     public void characters(char[] ch, int start, int length) throws SAXException {
