@@ -5,7 +5,7 @@ Simple API for XMl (SAX)
 -works on Android
 
 extend -> DefaultHandler
-import org.xml.sax.helpers.DefaultHandler
+import org.xml.dom.helpers.DefaultHandler
 
 
 
