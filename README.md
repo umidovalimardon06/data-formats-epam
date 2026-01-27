@@ -9,3 +9,5 @@ This repository contains multiple branches:
 3. [Lesson-3](https://github.com/umidovalimardon06/data-formats-epam/tree/lesson-3)
 
 4. [Lesson-4](https://github.com/umidovalimardon06/data-formats-epam/tree/lesson-4)
+
+5. [Lesson-5-JSON](https://github.com/umidovalimardon06/data-formats-epam/tree/lesson-5-json)
