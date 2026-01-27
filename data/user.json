@@ -1,0 +1,10 @@
+{
+  "name": "Tokyo",
+  "age": 18,
+  "isMarried": false,
+  "skills": ["Java","Python"],
+  "address": {
+    "city": "London",
+    "zip": "E1-17"
+  }
+}
