@@ -13,3 +13,5 @@ This repository contains multiple branches:
 5. [Lesson-5-JSON](https://github.com/umidovalimardon06/data-formats-epam/tree/lesson-5-json)
 
 6. [Lesson-6-YAML](https://github.com/umidovalimardon06/data-formats-epam/tree/lesson-6-yaml)
+
+7. [Lesson-7-JACKSON](https://github.com/umidovalimardon06/data-formats-epam/tree/lesson-7-jackson)
