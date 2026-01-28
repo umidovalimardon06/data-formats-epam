@@ -1,0 +1,13 @@
+{
+  "name": "Tokyo",
+  "age": 18,
+  "married": false,
+  "skills": [
+    "Coding",
+    "Cooking"
+  ],
+  "address": {
+    "city": "Tashkent",
+    "zip": "I1000"
+  }
+}
