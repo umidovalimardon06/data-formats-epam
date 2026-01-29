@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<order id="AC17">
+    <customer>Kyle</customer>
+    <items>
+        <item sku="P100" quantity="2"/>
+        <item sku="P101" quantity="5"/>
+    </items>
+</order>

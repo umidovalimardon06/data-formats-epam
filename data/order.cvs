@@ -1,0 +1,7 @@
+<order id="A123">
+  <customer>Amir</customer>
+  <items>
+    <item sku="P01" quantity="2"/>
+    <item sku="P02" quantity="1"/>
+  </items>
+</order>
